@@ -2,16 +2,30 @@ from fastapi import FastAPI, File, UploadFile, HTTPException, Request, Response,
 from typing import Optional
 from fastapi.responses import JSONResponse, FileResponse
 from pathlib import Path
-from openai import OpenAI
+#from openai import OpenAI
 import logging
 import os
 import json
 import time
+import textwrap
+
+import google.generativeai as genai
+
+from IPython.display import display
+from IPython.display import markdown
+from google.colab import userdata
+
 
 app = FastAPI()
-client = OpenAI(api_key='sk-proj-2JApfwSe6dwXMs43DwJTT3BlbkFJLxxgb9OaFFmQjCBXi0bW')
+GOOGLE_API_KEY=userdata.get('AIzaSyD5wXcOWaqhPxnD9dUiTbbqgbB39xDDf0o')
+genai.configure(api_key=GOOGLE_API_KEY)
+
 
 logging.basicConfig(level=logging.DEBUG)
+
+def to_markdown(text):
+    text = text.replace('•', ' *')
+    return Markdown(textwrap.indent(text, '> ', predicate=lambda _: True))
 
 @app.get("/whoami")
 def whoami(request: Request, response: Response):
@@ -30,7 +44,7 @@ async def upload(audio_file: UploadFile, conversation_id: Optional[str] = Cookie
     def get_biscuit_response(audio_file_path):
         nonlocal conversation_list
         with open(audio_file_path, "rb") as audio_file:
-            transcription = client.audio.transcriptions.create(
+            transcription = model.audio.transcriptions.create(
                 model="whisper-1",
                 file=audio_file
             )
@@ -38,8 +52,8 @@ async def upload(audio_file: UploadFile, conversation_id: Optional[str] = Cookie
             conversation_list.append(
                 {"role": "user", "content": user_question}
             )
-            completion = client.chat.completions.create(
-                model="gpt-3.5-turbo",
+            completion = model.chat.completions.create(
+                model="gemini-pro",
                 messages=conversation_list
             )
             biscuit_response = completion.choices[0].message.content
