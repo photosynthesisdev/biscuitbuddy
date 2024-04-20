@@ -1,4 +1,4 @@
-from fastapi import FastAPI, File, UploadFile, HTTPException
+from fastapi import FastAPI, File, UploadFile, HTTPException, Request
 from fastapi.responses import JSONResponse, FileResponse
 from pathlib import Path
 from openai import OpenAI
@@ -27,7 +27,7 @@ def safe_filename(filename):
     return filename.split('/')[-1].split('\\')[-1]
 
 @app.post("/upload/")
-async def create_upload_file(audio_file: UploadFile = File(...)):
+async def upload(audio_file: UploadFile):
     if not audio_file.filename.lower().endswith(('.wav', '.mp3')):
         raise HTTPException(status_code=400, detail="Unsupported file type.")
     safe_name = safe_filename(audio_file.filename)
@@ -65,4 +65,4 @@ def get_biscuit_response(audio_file_path):
 
 @app.get("/")
 def read_root():
-    return FileResponse('try.html')
+    return FileResponse('index.html')
