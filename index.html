@@ -54,10 +54,10 @@
 
             // Prepare the file to be uploaded
             const formData = new FormData();
-            formData.append('audioFile', audioBlob, 'recording.wav');
+            formData.append('audio_file', audioBlob, 'recording.wav');
 
             // Fetch API to send the audio file to the server
-            fetch('/upload/', {
+            fetch('https://biscuitbuddy.io/api/upload/', {
                 method: 'POST',
                 body: formData,
             })
