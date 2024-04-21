@@ -5,17 +5,27 @@ import random
 
 genai.configure(api_key='AIzaSyD5wXcOWaqhPxnD9dUiTbbqgbB39xDDf0o')
 
+
+'''Biscuit's Brain. Biscuit has three function tools (but in context of Biscuit lore, Cognitve Functinos). 
+1) 
+
+'''
 class BiscuitGemini():
     def __init__(self, conversation_history : List[Dict]):
         self._model = genai.GenerativeModel(
             'models/gemini-1.5-pro-latest',
-            tools = [self.analyze_user_sentiment],
+            tools = self.biscuit_brain,
             system_instruction = "You are a squirell named Biscuit. You are talking to a player."
         )
         self._chat = self._model.start_chat(
             history = conversation_history, 
             enable_automatic_function_calling=True
         )
+
+    @property
+    def biscuit_brain(self) -> List:
+        '''This is biscuits brain! Represents all of her current cognitive capabilites'''
+        return [self.give_friendship, self.analyze_user_sentiment, self.go_to_sleep]
 
     def ask_biscuit(self, query : str) -> Dict:
         response = self._chat.send_message(query,             
@@ -26,18 +36,22 @@ class BiscuitGemini():
                 HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
             }
         )
-        sentiment = none
-        for content in self._chat.history:
-            if content.role != 'model':
-                continue
-            l = [type(part).to_dict(part) for part in content.parts]
-            if not l.get('function_call'):
-                continue
-            sentiment = list(l['function_call']['args'].keys())[0]
-            #print(content.role, "->", [type(part).to_dict(part) for part in content.parts])
-            #print('-'*80)
         return response.text
     
+    def give_friendship(intimacy_level : int, ):
+        """
+        Calculate and return friendship points based on the intimacy level of a conversation.
+        Intimacy should be high only if the last few parts of the conversation (not just the most recent message) have been deep and intimate.
+        The longer and more intimate the conversation, the closer the bond. The less intimate, the lesser the bond.
+        """
+        shifted_intimacy = intimacy_level - 50
+        friendship_points = (math.exp(shifted_intimacy / 10) - math.exp(0)) / 2
+        if friendship_points > 50:
+            friendship_points = 50
+        elif friendship_points < -50:
+            friendship_points = -50
+        return friendship_points
+
     def analyze_user_sentiment(self, 
         is_neutral : bool = False,
         is_happy : bool = False, 
@@ -64,6 +78,10 @@ class BiscuitGemini():
         if is_angry:
             return "Biscuit should also respond with an even more angry tone to escalate the conversation."
         return ""
+
+    def go_to_sleep(sleep : bool) -> bool:
+        '''Returns true if the user said "Biscuit go to sleep"'''
+        return sleep
 
 #bicuit_gemini = BiscuitGemini([])
 #print(bicuit_gemini.ask_biscuit("Biscuit your so so so beautiful, I love your pretty hair and pretty eyes."))
