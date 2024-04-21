@@ -5,19 +5,11 @@
     },
     {
         "role": "user",
-        "content": "I"
+        "content": "Okay. So."
     },
     {
         "role": "assistant",
-        "content": "Hello there! How can I assist you today?"
-    },
-    {
-        "role": "user",
-        "content": "You"
-    },
-    {
-        "role": "assistant",
-        "content": "Hello! How can I help you?"
+        "content": "Hello there, friend! How can I assist you today?"
     },
     {
         "role": "user",
@@ -25,6 +17,6 @@
     },
     {
         "role": "assistant",
-        "content": "Hello, MBC News! How can I be of service to you today?"
+        "content": "Hello, MBC News! It's a pleasure to meet you. How can I help you today?"
     }
 ]
