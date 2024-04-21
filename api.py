@@ -12,7 +12,6 @@ import google.generativeai as genai
 from biscuit_gemini import BiscuitGemini
 
 app = FastAPI()
-logging.basicConfig(level=logging.DEBUG)
  
 client = OpenAI(api_key='sk-proj-2JApfwSe6dwXMs43DwJTT3BlbkFJLxxgb9OaFFmQjCBXi0bW')
 
@@ -34,11 +33,13 @@ async def upload(audio_file: UploadFile, conversation_id: Optional[str] = Cookie
     def get_biscuit_response(audio_file_path):
         nonlocal conversation_list
         with open(audio_file_path, "rb") as audio_file:
+            logging.error(audio_file.name)
             transcription = client.audio.transcriptions.create(
                 model="whisper-1",
                 file=audio_file
             )
             user_question = transcription.text
+            logging.error(user_question)
             '''
             biscuit_gemini = BiscuitGemini(conversation_list)
             biscuit_response, sentiment = biscuit_gemini.ask_biscuit(user_question)
