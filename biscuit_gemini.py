@@ -23,7 +23,7 @@ class BiscuitGemini():
     @property
     def biscuit_brain(self) -> List:
         '''This is biscuits brain! Represents all of her current cognitive capabilites. Returns all function tools.'''
-        return [self.analyze_user_sentiment]
+        return [self.give_friendship, self.analyze_user_sentiment, self.go_to_sleep]
 
     def ask_biscuit(self, query : str) -> Dict:
         '''Puts user query in and gives biscuits response'''
