@@ -1,6 +1,7 @@
 # Biscuit Buddy 🐿️🐿️🐿️
 - *PLAY NOW ON MOBILE OR LAPTOP WEB BROWSER: https://biscuitbuddy.io*
-
+- *UNITY PROJECT: https://drive.google.com/drive/folders/1LHQqRQyaWrjNj6yIE_D5zK4E76JGCFsC?usp=drive_link*
+  
 ![Biscuit Buddy Web View](graphics/WebView.png)
 
 ## What is BiscuitBuddy?
@@ -54,3 +55,6 @@ Chat, bond, level up, and compete to become Biscuits #1 best friend!
 - Add more characters to the game that players can swap in and out in place of biscuit
 - Setup messaging functionality with Biscuit, for those that don't like using their microphone
 - View past conversations with biscuit
+
+
+- *The Unity Project is 1.5GB in size which would have taken 1+ hour to upload to github (because so many large files), so I uploaded just main CS scripts in here for the before 8AM submission. I just uploaded the Assets folder to google drive, and added the link to the top of the readme, which is why there is this commit at 8:41PM
