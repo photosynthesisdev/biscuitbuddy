@@ -1,7 +1,7 @@
 # Biscuit Buddy 🐿️🐿️🐿️
 - *PLAY NOW ON MOBILE OR LAPTOP WEB BROWSER: https://biscuitbuddy.io*
 
-![Biscuit Buddy Web View](WebView.png)
+![Biscuit Buddy Web View](graphics/WebView.png)
 
 ## What is BiscuitBuddy?
 
@@ -16,7 +16,7 @@ Chat, bond, level up, and compete to become Biscuits #1 best friend!
 
 
 ## How Was It Made?
-<img src="UNITY_VIEW.png" alt="Biscuit Buddy Web View">
+<img src="graphics/UNITY_VIEW.png" alt="Biscuit Buddy Web View">
 
 ### Client-Side
 - **Unity**: Developed using Unity 2023.2.19, targeting WebGL.
@@ -34,9 +34,9 @@ Chat, bond, level up, and compete to become Biscuits #1 best friend!
   3) When biscuit should sleep! (Must say "Sleep at once biscuit.")
 
 <p float="left">
-  <img src="HAPPY.jpeg" alt="Biscuit Happy" height="500"/>
-  <img src="SLEEP.jpeg" alt="Biscuit Sleeping" height="500"/>
-  <img src="SCARED.jpeg" alt="Biscuit Scared" height="500"/>
+  <img src="graphics/HAPPY.jpeg" alt="Biscuit Happy" height="500"/>
+  <img src="graphics/SLEEP.jpeg" alt="Biscuit Sleeping" height="500"/>
+  <img src="graphics/SCARED.jpeg" alt="Biscuit Scared" height="500"/>
 </p>
 
 *Biscuit Happy, Sleepy, and Scared, respectively*
