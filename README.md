@@ -12,7 +12,7 @@ Chat, bond, level up, and compete to become Biscuits #1 best friend!
 - Speak to Biscuit by holding down on the "Talk" button, and release the button when you are done talking.
 - Biscuit will process your audio and respond with a customized and personal answer.
 - Biscuit will physically react to your tonality, and give you friendship points based on the depth of your conversation with her.
-- Biscuit Buddy is designed for maximum accessibility, playable directly in web browsers, both desktop and mobile, via https://biscuitbuddy.io*. By embracing a web-based platform, we've eliminated the barriers posed by native app distribution, ensuring a broad reach beyond any single operating system or app store. Moreover, with an initial download size of just 8 MB, Biscuit Buddy offers virtually instant load times, providing a seamless experience for players with decent internet connectivity.
+- Biscuit Buddy is designed for maximum accessibility, playable directly in both desktop and mobile web browsers, via https://biscuitbuddy.io*. By embracing a web-based platform, we've eliminated the barriers posed by native app distribution, ensuring a broad reach beyond any single operating system or app store. Moreover, with an initial download size of just 8 MB, Biscuit Buddy offers virtually instant load times, providing a seamless experience for players with decent internet connectivity.
 
 
 ## How Was It Made?
