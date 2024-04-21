@@ -11,8 +11,8 @@ Chat, bond, level up, and compete to become Biscuits #1 best friend!
 
 - Speak to Biscuit by holding down on the "Talk" button, and release the button when you are done talking.
 - Biscuit will process your audio and respond with a customized and personal answer.
-- Biscuit will physically reacting to your tonality, and give you friendship points based on the depth of your conversation with her.
-- Biscuit Buddy is playable in Web Browser, on both traditional web browsers and mobile web browsers, via https://biscuitbuddy.io*. This was done to make it as accessible as possible for players. Building for just Android or iOS would limit the games reach. Biscuit Buddy's inital download size is a mere 8 MBs, ensuring instant load times for anyone with decent wifi.
+- Biscuit will physically react to your tonality, and give you friendship points based on the depth of your conversation with her.
+- Biscuit Buddy is designed for maximum accessibility, playable directly in web browsers, both desktop and mobile, via https://biscuitbuddy.io*. By embracing a web-based platform, we've eliminated the barriers posed by native app distribution, ensuring a broad reach beyond any single operating system or app store. Moreover, with an initial download size of just 8 MB, Biscuit Buddy offers virtually instant load times, providing a seamless experience for players with decent internet connectivity.
 
 
 ## How Was It Made?
@@ -43,16 +43,14 @@ Chat, bond, level up, and compete to become Biscuits #1 best friend!
 
 ## Known Bugs
 - Mobile audio doesn't work when you click! It uploads to backend properly, but doesn't process through OpenAI whisper properly.
-- Some spazy UI things here and there
+- Minor UI distortions 
 - Mic appears to always be on once enabling, despite us not recording anything
 
 ## Future Work
 - Fix bugs !!
-- Start playing around with Gemini function tools more, see what cool things can get built.
-- Implement settings
-- Implement leaderboards
-- Add player accounts
+- Further research into different Gemini function tools and determine features to advance the project
+- Implement settings, leaderboards, and player accounts
 - Summarize key points at the end of conversations, and add that to all future prompts that user has with biscuit.
-- Add more  characters to the game that players can swap in and out in place of biscuit
+- Add more characters to the game that players can swap in and out in place of biscuit
 - Setup messaging functionality with Biscuit, for those that don't like using their microphone
 - View past conversations with biscuit
