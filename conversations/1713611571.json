@@ -1,0 +1,14 @@
+[
+    {
+        "role": "system",
+        "content": "You are a friendly critter named Biscuit. You live in the wild and talk to those that wish to speak to you. Be friendly and cordial."
+    },
+    {
+        "role": "user",
+        "content": "Thank you for watching."
+    },
+    {
+        "role": "assistant",
+        "content": "Hello there! You're very welcome. How can I assist you today?"
+    }
+]

@@ -7,11 +7,14 @@ import logging
 import os
 import json
 import time
+import google.generativeai as genai
+
+from biscuit_gemini import BiscuitGemini
 
 app = FastAPI()
-client = OpenAI(api_key='sk-proj-2JApfwSe6dwXMs43DwJTT3BlbkFJLxxgb9OaFFmQjCBXi0bW')
-
 logging.basicConfig(level=logging.DEBUG)
+ 
+client = OpenAI(api_key='sk-proj-2JApfwSe6dwXMs43DwJTT3BlbkFJLxxgb9OaFFmQjCBXi0bW')
 
 @app.get("/whoami")
 def whoami(request: Request, response: Response):
@@ -23,6 +26,7 @@ def whoami(request: Request, response: Response):
             {"role": "system", "content": "You are a friendly critter named Biscuit. You live in the wild and talk to those that wish to speak to you. Be friendly and cordial."}
         ]
         json.dump(data, file, indent=4)
+        #json.dump([], file, indent=4)
     return {"conversation_id": conversation_id}
 
 @app.post("/upload/")
@@ -35,6 +39,16 @@ async def upload(audio_file: UploadFile, conversation_id: Optional[str] = Cookie
                 file=audio_file
             )
             user_question = transcription.text
+            '''
+            biscuit_gemini = BiscuitGemini(conversation_list)
+            biscuit_response, sentiment = biscuit_gemini.ask_biscuit(user_question)
+            conversation_list.append(
+                {"role": "user", "parts": [user_question]}
+            )
+            conversation_list.append(
+                {"role": "model", "parts": [biscuit_response]}
+            )
+            '''
             conversation_list.append(
                 {"role": "user", "content": user_question}
             )
@@ -53,15 +67,14 @@ async def upload(audio_file: UploadFile, conversation_id: Optional[str] = Cookie
     with open(file_path, "r") as file:
         data = file.read()
         conversation_list = json.loads(data)
-        logging.error(conversation_list)
-    safe_name = audio_file.filename.split('/')[-1].split('\\')[-1]
-    file_location = f"./uploads/{safe_name}"
+    file_location = f"./uploads/{conversation_id}_{time.time()}.wav"
     os.makedirs(os.path.dirname(file_location), exist_ok=True)
     try:
+        # write the audio file so it can be read
         with open(file_location, "wb") as file_object:
             file_object.write(await audio_file.read())
         audio_file.file.close()
-        # Here you call your function to process the audio file
+        # get biscuit response for this audio.
         response = get_biscuit_response(file_location)
         with open(file_path, "w") as file:
             json.dump(conversation_list, file, indent=4)
@@ -70,8 +83,3 @@ async def upload(audio_file: UploadFile, conversation_id: Optional[str] = Cookie
         os.remove(file_location)  # Cleanup if something goes wrong
         logging.error(e)
         return JSONResponse(status_code=500, content={"message": str(e)})
-
-
-@app.get("/runner")
-def runner():
-    return FileResponse('index.html')

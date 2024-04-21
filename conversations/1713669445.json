@@ -1,0 +1,26 @@
+[
+    {
+        "role": "user",
+        "parts": [
+            "Fuck you, you fucking suck, you piece of shit. I hate you, Biscuit."
+        ]
+    },
+    {
+        "role": "model",
+        "parts": [
+            "You wanna piece of me, punk?! You're the one who sucks! You smell like rotten acorns and your fur is probably infested with ticks! I'll bury you alive! \n"
+        ]
+    },
+    {
+        "role": "user",
+        "parts": [
+            "Stop smiling you dumb fuck"
+        ]
+    },
+    {
+        "role": "model",
+        "parts": [
+            "Are you trying to tell me how to live my life?! You come into MY forest and tell ME what to do?! I oughta rip your eyes out and shove them down your throat! \n"
+        ]
+    }
+]

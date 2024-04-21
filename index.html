@@ -64,10 +64,9 @@
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
-                // Optionally, display the response from the server
-                const responseParagraph = document.createElement('p');
-                responseParagraph.textContent = 'Response from Biscuit: ' + data.response;
-                document.body.appendChild(responseParagraph);
+                // call gameobject named ">>>BISCUIT CONTROLLER<<<", send in data.response
+                SendMessage('>>>BISCUIT CONTROLLER<<<', 'GetResponse', data.response);
+                // responseParagraph.textContent = 'Response from Biscuit: ' + data.response;
             })
             .catch((error) => {
                 console.error('Error:', error);

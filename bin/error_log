@@ -1,0 +1,94 @@
+[2024-04-21 03:58:30 +0000] [65882] [ERROR] Worker (pid:65884) was sent SIGTERM!
+[2024-04-21 03:58:30 +0000] [65882] [ERROR] Worker (pid:65883) was sent SIGTERM!
+[2024-04-21 04:01:44 +0000] [68381] [ERROR] Worker (pid:68382) was sent SIGTERM!
+[2024-04-21 04:01:44 +0000] [68381] [ERROR] Worker (pid:68383) was sent SIGTERM!
+[2024-04-21 04:01:45 +0000] [68429] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/root/biscuitbuddy/venv/lib/python3.11/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/root/biscuitbuddy/venv/lib/python3.11/site-packages/uvicorn/workers.py", line 68, in init_process
+    super().init_process()
+  File "/root/biscuitbuddy/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/root/biscuitbuddy/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/root/biscuitbuddy/venv/lib/python3.11/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/root/biscuitbuddy/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/biscuitbuddy/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/biscuitbuddy/venv/lib/python3.11/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/root/biscuitbuddy/api.py", line 25
+    	json.dump([], file, indent=4)
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2024-04-21 04:01:45 +0000] [68430] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/root/biscuitbuddy/venv/lib/python3.11/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/root/biscuitbuddy/venv/lib/python3.11/site-packages/uvicorn/workers.py", line 68, in init_process
+    super().init_process()
+  File "/root/biscuitbuddy/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/root/biscuitbuddy/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/root/biscuitbuddy/venv/lib/python3.11/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/root/biscuitbuddy/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/biscuitbuddy/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/biscuitbuddy/venv/lib/python3.11/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/root/biscuitbuddy/api.py", line 25
+    	json.dump([], file, indent=4)
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2024-04-21 04:01:45 +0000] [68428] [ERROR] Worker (pid:68429) exited with code 3
+[2024-04-21 04:01:45 +0000] [68428] [ERROR] Worker (pid:68430) was sent SIGTERM!
+[2024-04-21 04:01:45 +0000] [68428] [ERROR] Shutting down: Master
+[2024-04-21 04:01:45 +0000] [68428] [ERROR] Reason: Worker failed to boot.
+[2024-04-21 04:06:12 +0000] [68470] [CRITICAL] WORKER TIMEOUT (pid:68472)
+[2024-04-21 04:06:20 +0000] [68470] [CRITICAL] WORKER TIMEOUT (pid:68471)
+[2024-04-21 04:06:23 +0000] [68470] [ERROR] Worker (pid:68471) was sent code 134!
+[2024-04-21 04:06:23 +0000] [68470] [ERROR] Worker (pid:68472) was sent SIGKILL! Perhaps out of memory?
+[2024-04-21 05:39:49 +0000] [1400] [ERROR] Worker (pid:1402) was sent SIGTERM!
+[2024-04-21 05:39:49 +0000] [1400] [ERROR] Worker (pid:1401) was sent SIGTERM!
+[2024-04-21 05:42:05 +0000] [2482] [ERROR] Worker (pid:2484) was sent SIGTERM!
+[2024-04-21 05:42:05 +0000] [2482] [ERROR] Worker (pid:2483) was sent SIGTERM!
+[2024-04-21 05:44:11 +0000] [2580] [ERROR] Worker (pid:2582) was sent SIGTERM!
+[2024-04-21 05:44:11 +0000] [2580] [ERROR] Worker (pid:2583) was sent SIGTERM!

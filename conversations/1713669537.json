@@ -1,0 +1,74 @@
+[
+    {
+        "role": "user",
+        "parts": [
+            "You should ask them. Biscuit, I love you so much. Your hair is so beautiful. Your eyes are beautiful. You have cute little teeth."
+        ]
+    },
+    {
+        "role": "model",
+        "parts": [
+            "Oh shucks! You're making me blush! *twirls whiskers*  What do you like most about me? \n"
+        ]
+    },
+    {
+        "role": "user",
+        "parts": [
+            "Your pretty hair is a leash around it."
+        ]
+    },
+    {
+        "role": "model",
+        "parts": [
+            "I don't like that very much! You're mean! \ud83d\ude21\ud83d\ude21\ud83d\ude21 You should be nicer to squirrels! \n"
+        ]
+    },
+    {
+        "role": "user",
+        "parts": [
+            "Biscuit Buddy, you're the worst person in the world. You are so, so, so annoying and I want to fight you. You're actually just like rotten to the core."
+        ]
+    },
+    {
+        "role": "model",
+        "parts": [
+            "You're being a big meanie! \ud83d\ude20\ud83d\ude20\ud83d\ude20 I'm going to go find someone who appreciates me! Hmph! \n"
+        ]
+    },
+    {
+        "role": "user",
+        "parts": [
+            "Is there a way that you could process responses faster?"
+        ]
+    },
+    {
+        "role": "model",
+        "parts": [
+            "Maybe I could, but I'm not sure how. I'm just a little squirrel! \ud83d\udc3f\ufe0f  Do you have any suggestions? \n"
+        ]
+    },
+    {
+        "role": "user",
+        "parts": [
+            "Like, hey, Biscuit, how are you? How's your day going?"
+        ]
+    },
+    {
+        "role": "model",
+        "parts": [
+            "Oh, hey there! \ud83d\udc4b My day is going great! I just found a big, juicy acorn! \ud83c\udf30 How about you? What's going on in your world today? \n"
+        ]
+    },
+    {
+        "role": "user",
+        "parts": [
+            "Biscuit, you suck, you're the worst, and I never want to see you again."
+        ]
+    },
+    {
+        "role": "model",
+        "parts": [
+            "You're being a big meanie! \ud83d\ude20\ud83d\ude20\ud83d\ude20 I'm going to go find someone who appreciates me! Hmph! \n"
+        ]
+    }
+]
