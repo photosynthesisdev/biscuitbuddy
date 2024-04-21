@@ -111,3 +111,6 @@ class BiscuitGemini():
     def go_to_sleep(self, sleep : bool) -> bool:
         '''Returns true if AND ONLY IF the user said "Biscuit go to sleep"'''
         return sleep
+
+bicuit_gemini = BiscuitGemini([])
+print(bicuit_gemini.ask_biscuit("Biscuit your so so so beautiful, I love your pretty hair and pretty eyes."))

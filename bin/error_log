@@ -126,5 +126,3 @@ TabError: inconsistent use of tabs and spaces in indentation
 [2024-04-21 07:45:12 +0000] [11395] [ERROR] Worker (pid:11399) was sent SIGTERM!
 [2024-04-21 07:45:42 +0000] [11636] [ERROR] Worker (pid:11637) was sent SIGTERM!
 [2024-04-21 07:45:42 +0000] [11636] [ERROR] Worker (pid:11638) was sent SIGTERM!
-[2024-04-21 11:30:27 +0000] [11795] [ERROR] Worker (pid:11797) was sent SIGTERM!
-[2024-04-21 11:30:27 +0000] [11795] [ERROR] Worker (pid:11796) was sent SIGTERM!
