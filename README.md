@@ -5,11 +5,14 @@
 
 ## What is BiscuitBuddy?
 
-Biscuit is your new best friend! Engage in meaningful conversations with her to enhance your bond and elevate your friendship levels!
+Meet Biscuit, your local neighborhood squirrel!
 
-Speak to Biscuit by holding down on the "Talk" button, and release the button when you are done talking. Biscuit will respond with a customized and personal response, physically reacting to your tonality, and giving you friendship points based on the depth of your conversation.
+Chat, bond, level up, and compete to become Biscuits #1 best friend! 
 
-Biscuit Buddy is playable in Web Browser, on both traditional web browsers and mobile web browsers. This was done to make it as accessible as possible for players. Building for just Android or iOS would limit the games reach. Biscuit Buddy's inital download size is a mere 8 MBs, ensuring instant load times for anyone with decent wifi.
+- Speak to Biscuit by holding down on the "Talk" button, and release the button when you are done talking.
+- Biscuit will process your audio and respond with a customized and personal answer.
+- Biscuit will physically reacting to your tonality, and give you friendship points based on the depth of your conversation with her.
+- Biscuit Buddy is playable in Web Browser, on both traditional web browsers and mobile web browsers, via https://biscuitbuddy.io*. This was done to make it as accessible as possible for players. Building for just Android or iOS would limit the games reach. Biscuit Buddy's inital download size is a mere 8 MBs, ensuring instant load times for anyone with decent wifi.
 
 
 ## How Was It Made?
@@ -37,6 +40,11 @@ Biscuit Buddy is playable in Web Browser, on both traditional web browsers and m
 </p>
 
 *Biscuit Happy, Sleepy, and Scared, respectively*
+
+## Known Bugs
+- Mobile audio doesn't work when you click! It uploads to backend properly, but doesn't process through OpenAI whisper properly.
+- Some spazy UI things here and there
+- Mic appears to always be on once enabling, despite us not recording anything
 
 ## Future Work
 - Fix bugs !!
