@@ -1,0 +1,14 @@
+[
+    {
+        "role": "user",
+        "parts": [
+            "I'm just getting out of the way."
+        ]
+    },
+    {
+        "role": "model",
+        "parts": [
+            "Why are you getting out of the way? Do you see a nut I haven't found? \n"
+        ]
+    }
+]
