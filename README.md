@@ -31,13 +31,12 @@ Biscuit Buddy is playable in Web Browser, on both traditional web browsers and m
   3) When biscuit should sleep! (Must say "Sleep at once biscuit.")
 
 <p float="left">
-  <img src="/path/to/first_image.jpg" alt="First Image" style="width:200px;"/>
-  <img src="/path/to/second_image.jpg" alt="Second Image" style="width:200px;"/>
-  <!-- Add more images if you like -->
+  <img src="HAPPY.jpeg" alt="Biscuit Happy" height="500"/>
+  <img src="SLEEP.jpeg" alt="Biscuit Sleeping" height="500"/>
+  <img src="SCARED.jpeg" alt="Biscuit Scared" height="500"/>
 </p>
-<img src="SLEEP.jpeg" alt="Biscuit Sleeping" height="500">
 
-*Biscuit Sleeping*
+*Biscuit Happy, Sleepy, and Scared, respectively*
 
 ## Future Work
 - Fix bugs !!
