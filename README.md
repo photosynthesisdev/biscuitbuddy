@@ -1,4 +1,4 @@
-# Biscuit Buddy 🐿️🐿️🐿️
+# Biscuit Buddy 🐿️🐿️🐿
 - *PLAY NOW ON MOBILE OR LAPTOP WEB BROWSER: https://biscuitbuddy.io*
 - *UNITY PROJECT: https://drive.google.com/drive/folders/1LHQqRQyaWrjNj6yIE_D5zK4E76JGCFsC?usp=drive_link*
   
